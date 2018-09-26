@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+aside {
+  width: 30%;
+  background: #fff;
+  color: #222;
+  display: inline-block;
+  float: left;
+}
+
+.content {
+  width:70%;
+  display: inline-block;
+}
+
+.content p {
+  padding: 0 25px;
+  color: #aaa;
+  text-align: justify;
+  max-width: 600px;
+  margin: auto;
+  font-size: 14px;
+}
+
+ul.menu {
+  display: inline-block;
+  padding: 0;
+  border: 1px solid;
+  margin: 0 0 20px;
+}
+
+ul.side-menu {
+  display: block;
+  padding: 0;
+  margin: 5px;
+}
+
+ul.side-menu li {
+  list-style: none;
+  display: block;
+}
+
+menu img {
+  width: 30px;
+  display: block;
+  text-align: center;
+  margin: 0 auto 15px;
+}
+
+ul.menu li {
+  list-style: none;
+  display: inline-block;
+}
+
+button {
+  padding: 10px;
+  cursor: pointer;
+  border-color: aliceblue;
+  transition: 0.7s;
+}
+
+button:hover {
+    border-color: rgb(216, 216, 216) rgb(209, 209, 209) rgb(186, 186, 186);
+}
