@@ -1,17 +1,14 @@
 import React from 'react';
 import Menu from './Menu';
 
-const Sidebar = (props) => {
-    props = {
-      title: 'Sidebar'
-    }
+const Sidebar = ({menuButtons, activeButtonIndex, changeActiveIndex}) => {
+    const className = 'side-menu';
     return (
       <aside>
-        <h1>{props.title}</h1>
-        <Menu className='side-menu' />
-        <Menu className='side-menu' />
+        <h1>Sidebar</h1>
+        <Menu menuButtons={menuButtons} className={className} activeButtonIndex={activeButtonIndex} changeActiveIndex={changeActiveIndex} />
       </aside>
       )
-  }
+    }
 
 export default Sidebar;

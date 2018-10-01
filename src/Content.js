@@ -1,12 +1,13 @@
 import React from 'react';
+import Tabs from './Tabs.js';
 
-const Content = (props) => {
+const Content = ({activeButtonIndex, activeTab, tabs, changeActiveTab}) => {
     return (
-      <div className="content">
+      <div className='content'>
         <h1>Content</h1>
-        <p>
-          {props.content}
-        </p>
+        <p>Current active Menu Buttons index: {activeButtonIndex}</p>
+        <br />
+        <Tabs activeTab={activeTab} tabs={tabs} changeActiveTab={changeActiveTab} />
       </div>
       )
   }

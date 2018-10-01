@@ -1,19 +1,17 @@
 import React from 'react';
 import Button from './Button';
 
-const Menu = (props) => {
-
-    const handleClick = () => console.log('click');
-
+const Menu = ({activeButtonIndex, changeActiveIndex, className, menuButtons, label }) => {
     return (
-      <ul className={props.className}>
-        <li>
-          <Button label="button 1" onClick={handleClick} />
-        </li>
-        <li>
-          <Button label="button 2"/>
-        </li>
-      </ul>
+      <div>
+          <ul className={className}>
+            { menuButtons.map((button, index) =>
+              <li key={index}>
+                <Button label={button.label} isActive={activeButtonIndex === index} changeIndex={() => changeActiveIndex(index)} />
+              </li>
+          )}
+          </ul>
+      </div>
       )
   }
 
