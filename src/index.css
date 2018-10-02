@@ -26,6 +26,35 @@ aside {
   font-size: 14px;
 }
 
+.tabContainer {
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+.tabs {
+  display: none;
+  width: 400px;
+  margin: auto;
+}
+
+.tabs.visible {
+  display: block;
+}
+
+.tabs button:not(.accordion) {
+  width: 33.33%;
+  border: 1px solid #ccc;
+}
+
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+}
+
+.tabcontent.active {
+  display: block;
+}
+
 ul.menu {
   display: inline-block;
   padding: 0;
@@ -70,4 +99,31 @@ button.active {
 
 button:hover {
     border-color: rgb(216, 216, 216) rgb(209, 209, 209) rgb(186, 186, 186);
+}
+
+.accordion-tab {
+  overflow: hidden;
+  position: relative;
+}
+
+.accordion {
+    background-color: #eee;
+    color: #444;
+    cursor: pointer;
+    padding: 18px;
+    width: 100%;
+    text-align: left;
+    border: none;
+    outline: none;
+}
+
+.panel {
+    padding: 30px 18px;
+    background-color: #eff;
+    display: none;
+    transition: 0.4s;
+}
+
+.panel.active {
+  display: block;
 }
