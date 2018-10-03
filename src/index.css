@@ -113,12 +113,15 @@ button:hover {
 }
 
 .panel {
-    padding: 30px 18px;
-    background-color: #eff;
-    display: none;
-    transition: 0.4s;
+  background-color: #adf;
+  height: 0;
+  padding: 0;
 }
 
 .panel.active {
   display: block;
+  -webkit-transition: 0.4s;
+  -o-transition: 0.4s;
+  transition: 0.4s;
+  padding: 20px 20px 40px;
 }

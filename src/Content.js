@@ -2,6 +2,7 @@ import React from 'react';
 import Tabs from './Tabs/Tabs.js';
 import Accordion from './Accordion/Accordion.js';
 import accordionItems from './Accordion/AccordionItems.json';
+import MyIp from './MyIp.js';
 
 const Content = ({
   activeButtonIndex,
@@ -28,6 +29,9 @@ const Content = ({
         }
         {activeButtonIndex === 1 &&
           <Accordion items={accordionItems} activeItemslimit={3} />
+        }
+        {activeButtonIndex === 2 &&
+          <MyIp />
         }
       </div>
       )

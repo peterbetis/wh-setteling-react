@@ -16,7 +16,6 @@ class Accordion extends Component {
     const activeIndexes = this.state.activeIndex.slice()
     const isAlreadyActive = this.checkActive(index)
     const { activeItemslimit } = this.props;
-    console.log(activeItemslimit);
     if (!isAlreadyActive) {
       if (activeIndexes.length < activeItemslimit) {
           this.setState({activeIndex: activeIndexes.concat([index])})

@@ -11,14 +11,10 @@ const buttons = [
     label: 'Accordions'
   },
   {
-    label: 'button 3'
-  },
-  {
-    label: 'button 4'
+    label: 'Public Ip'
   }
 ];
 
-//remove classnames
 const tabs = [
   {
     title: 'London',
@@ -36,10 +32,9 @@ const tabs = [
 
 class App extends Component {
   state = {
-    activeButtonIndex: 1,
+    activeButtonIndex: null,
     activeTab: null,
-    activeAccordionItem: null,
-    activeItemslimit: 3
+    activeAccordionItem: null
   }
 
   handleActiveIndex = (activeButtonIndex) => {
@@ -52,7 +47,6 @@ class App extends Component {
 
   render() {
     const { activeButtonIndex } = this.state;
-    const { activeItemslimit } = this.state;
     return (
       <div>
         <Header className='App-header' menuButtons={buttons} activeButtonIndex={activeButtonIndex} changeActiveIndex={this.handleActiveIndex} />
