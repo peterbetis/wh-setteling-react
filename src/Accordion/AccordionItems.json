@@ -1,0 +1,26 @@
+[
+  {
+    "title": "Accordion item 1",
+    "children": "content 1"
+  },
+  {
+    "title": "Accordion item 2",
+    "children": "content 2"
+  },
+  {
+    "title": "Accordion item 3",
+    "children": "content 3"
+  },
+  {
+    "title": "Accordion item 4",
+    "children": "content 4"
+  },
+  {
+    "title": "Accordion item 5",
+    "children": "content 5"
+  },
+  {
+    "title": "Accordion item 6",
+    "children": "content 6"
+  }
+]

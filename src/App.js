@@ -36,9 +36,10 @@ const tabs = [
 
 class App extends Component {
   state = {
-    activeButtonIndex: null,
+    activeButtonIndex: 1,
     activeTab: null,
-    activeAccordionItem: null
+    activeAccordionItem: null,
+    activeItemslimit: 3
   }
 
   handleActiveIndex = (activeButtonIndex) => {
@@ -51,6 +52,7 @@ class App extends Component {
 
   render() {
     const { activeButtonIndex } = this.state;
+    const { activeItemslimit } = this.state;
     return (
       <div>
         <Header className='App-header' menuButtons={buttons} activeButtonIndex={activeButtonIndex} changeActiveIndex={this.handleActiveIndex} />

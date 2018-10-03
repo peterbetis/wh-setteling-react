@@ -1,43 +1,43 @@
 import React, {Component} from 'react';
 import AccordionItem from './AccordionItem';
 
-const accordionItems = [
-  {
-    title: 'Accordion item 1',
-    children: 'content 1'
-  },
-  {
-    title: 'Accordion item 2',
-    children: 'content 2'
-  },
-  {
-    title: 'Accordion item 3',
-    children: 'content 3'
-  },
-  {
-    title: 'Accordion item 4',
-    children: 'content 4'
-  }
-]
-
 class Accordion extends Component {
+
   state = {
-    activeIndex: 0
+    activeIndex: []
   }
 
-  toggleAccordion = (activeIndex) => {
-    this.setState({activeIndex});
+  checkActive(index) {
+      const isActive = this.state.activeIndex.indexOf(index) >= 0 ;
+      return isActive
+  }
+
+  openAccordion = (index) => {
+    const activeIndexes = this.state.activeIndex.slice()
+    const isAlreadyActive = this.checkActive(index)
+    const { activeItemslimit } = this.props;
+    console.log(activeItemslimit);
+    if (!isAlreadyActive) {
+      if (activeIndexes.length < activeItemslimit) {
+          this.setState({activeIndex: activeIndexes.concat([index])})
+      } else {
+          activeIndexes.shift()
+          this.setState({activeIndex: activeIndexes.concat([index])})
+      }
+    }
   }
 
   render() {
-    const { activeIndex } = this.state;
     const { activeButtonIndex } = this.props;
+    const { items } = this.props;
     return (
       <div className={'tabs ' + (activeButtonIndex === 1 ? 'visible' : '')} >
         <h2>ACCORDIONS</h2>
         {
-          accordionItems.map((item, index) =>
-            <AccordionItem isActive={activeIndex === index} title={item.title} key={index} onHeaderClick={() => this.toggleAccordion(index)} children={item.children}/>
+          items.map((item, index) =>
+            <AccordionItem isActive={this.checkActive(index)} title={item.title} key={index} onHeaderClick={() => this.openAccordion(index)} >
+              {item.children}
+            </AccordionItem>
         )}
       </div>
     )

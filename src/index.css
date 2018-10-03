@@ -32,13 +32,8 @@ aside {
 }
 
 .tabs {
-  display: none;
   width: 400px;
   margin: auto;
-}
-
-.tabs.visible {
-  display: block;
 }
 
 .tabs button:not(.accordion) {
