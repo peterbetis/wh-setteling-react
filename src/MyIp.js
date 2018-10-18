@@ -6,7 +6,7 @@ class MyIp extends Component {
     const ip = this.props.ip;    
     return (
         <div>
-          {ip}
+          Ip: <input type='text' value={ip}></input>
         </div>
     );
   }

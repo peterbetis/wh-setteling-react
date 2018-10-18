@@ -6,7 +6,7 @@ class WithIp extends Component {
   constructor(props){
       super(props);
       this.state = {
-          ip:'Loading...'
+          ip:'Loading ip...'
       };
   }
 
